@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_mange/features/auth/profile/ui/widgets/profile_bloc_builder.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/style.dart';
+import 'widgets/profile_body_view.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
         title: Text('My Profile', style: TextStyles.font17white),
         centerTitle: true,
       ),
-      body: const ProfileBlocBuilder(),
+      body: const ProfileBodyView(),
     );
   }
 }

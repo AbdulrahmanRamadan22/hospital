@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 
@@ -13,9 +14,16 @@ class ImageProfileAndEdit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        CircleAvatar(
-          radius: 60,
-          backgroundImage: NetworkImage(image ?? ""),
+        CachedNetworkImage(
+          imageUrl: image ?? "",
+          imageBuilder: (context, imageProvider) => CircleAvatar(
+            radius: 60,
+            backgroundImage: CachedNetworkImageProvider(image ?? ""),
+          ),
+          placeholder: (context, url) => CircularProgressIndicator(
+            color: ColorsApp.mainColor,
+          ),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
         Positioned(
           left: 70,

@@ -45,12 +45,31 @@ class LoginCubit extends Cubit<LoginState> {
         value: loginResponse.token ?? "Not Found Token");
 
     SharedPrefHelper.saveData(
-        key: SharedPrefKeys.name, value: loginResponse.name);
+        key: SharedPrefKeys.name, value: loginResponse.employee?.name);
 
     SharedPrefHelper.saveData(
-        key: SharedPrefKeys.role, value: loginResponse.role);
+        key: SharedPrefKeys.role, value: loginResponse.employee?.role);
 
     SharedPrefHelper.saveData(
-        key: SharedPrefKeys.image, value: loginResponse.image);
+        key: SharedPrefKeys.image, value: loginResponse.employee?.secureUrl);
+
+    SharedPrefHelper.saveData(
+        key: SharedPrefKeys.address, value: loginResponse.employee?.address);
+
+    SharedPrefHelper.saveData(
+        key: SharedPrefKeys.birthdate,
+        value: loginResponse.employee?.birthdate);
+
+    SharedPrefHelper.saveData(
+        key: SharedPrefKeys.email, value: loginResponse.employee?.email);
+
+    SharedPrefHelper.saveData(
+        key: SharedPrefKeys.phone, value: loginResponse.employee?.phone);
+
+    SharedPrefHelper.saveData(
+        key: SharedPrefKeys.status, value: loginResponse.employee?.status);
+
+    SharedPrefHelper.saveData(
+        key: SharedPrefKeys.gender, value: loginResponse.employee?.gender);
   }
 }

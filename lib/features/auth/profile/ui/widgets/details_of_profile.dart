@@ -7,16 +7,29 @@ import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/style.dart';
 
 class DetailsOfProfile extends StatelessWidget {
-  final Employee? employee;
-  const DetailsOfProfile({
-    super.key,
-    this.employee,
-  });
+  final String? role;
+  final String? email;
+  final String? phone;
+  final String? address;
+  final String? birthdate;
+  final String? status;
+  final String? name;
+  final String? gender;
+
+  const DetailsOfProfile(
+      {super.key,
+      this.role,
+      this.email,
+      this.phone,
+      this.address,
+      this.birthdate,
+      this.status,
+      this.name,
+      this.gender});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       margin: const EdgeInsets.all(15),
       padding: EdgeInsets.symmetric(
         horizontal: 10.w,
@@ -46,7 +59,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                'Specialist - ${employee?.role ?? 'role'}',
+                'Specialist - ${role ?? 'role'}',
                 style: TextStyles.font13black,
               ),
             ],
@@ -70,7 +83,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                employee?.gender ?? 'gender',
+                gender ?? 'gender',
                 style: TextStyles.font13black,
               ),
             ],
@@ -94,7 +107,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                employee?.birthdate ?? 'birthdate',
+                birthdate ?? 'birthdate',
                 style: TextStyles.font13black,
               ),
             ],
@@ -118,7 +131,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                employee?.address ?? 'address',
+                address ?? 'address',
                 style: TextStyles.font13black,
               ),
             ],
@@ -142,7 +155,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                employee?.status ?? 'status',
+                status ?? 'status',
                 style: TextStyles.font13black,
               ),
             ],
@@ -166,7 +179,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                employee?.email ?? 'email',
+                email ?? 'email',
                 style: TextStyles.font13black,
               ),
             ],
@@ -190,7 +203,7 @@ class DetailsOfProfile extends StatelessWidget {
               ),
               horizontalSpace(10),
               Text(
-                employee?.phone ?? 'phone',
+                phone ?? 'phone',
                 style: TextStyles.font13black,
               ),
             ],
