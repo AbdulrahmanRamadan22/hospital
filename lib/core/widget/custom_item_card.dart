@@ -16,7 +16,9 @@ class CustomItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return OverflowBar(
+      alignment: MainAxisAlignment.start,
+      
       children: [
         Container(
           padding: const EdgeInsets.all(5),
@@ -36,7 +38,7 @@ class CustomItemCard extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
           style: TextStyles.font14black,
-        )
+        ),
       ],
     );
   }

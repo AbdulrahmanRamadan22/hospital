@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:hospital_mange/features/auth/profile/data/apis/profile_apis_constants.dart';
 import 'package:hospital_mange/features/auth/profile/data/models/user_model.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 import 'package:retrofit/retrofit.dart';
 

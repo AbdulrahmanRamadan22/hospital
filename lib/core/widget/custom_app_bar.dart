@@ -14,6 +14,7 @@ class CustomImageAndNameAndSpecialty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     final imageUrl = SharedPrefHelper.getData(key: SharedPrefKeys.image);
 
     return Card(

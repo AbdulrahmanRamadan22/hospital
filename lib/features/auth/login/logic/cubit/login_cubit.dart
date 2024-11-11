@@ -23,6 +23,7 @@ class LoginCubit extends Cubit<LoginState> {
     ));
     response.when(success: (loginResponse) async {
       await saveUserData(loginResponse);
+
       SharedPrefValues.token =
           await SharedPrefHelper.getSecuredString(key: SharedPrefKeys.token);
 
@@ -42,6 +43,7 @@ class LoginCubit extends Cubit<LoginState> {
     SharedPrefHelper.saveSecuredString(
         key: SharedPrefKeys.token,
         value: loginResponse.token ?? "Not Found Token");
+
     SharedPrefHelper.saveData(
         key: SharedPrefKeys.name, value: loginResponse.name);
 
