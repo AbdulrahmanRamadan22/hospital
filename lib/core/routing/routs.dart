@@ -12,5 +12,9 @@ class Routes {
   static const String casesDetailsScreen = '/casesDetailsScreen';
   static const String employeesScreen = '/employeesScreen';
   static const String addUser = '/addUserScreen';
-  static const String myProfile = '/myProfileScrren';
+  static const String myProfile = '/myProfileScreen';
+
+  static const String  profileEmployee = '/profileEmployee';
+
+ 
 }

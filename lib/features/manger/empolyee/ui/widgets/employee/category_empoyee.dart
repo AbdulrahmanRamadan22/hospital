@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/helper/sixbox.dart';
-import '../../../../../core/theming/colors.dart';
-import '../../../../../core/theming/style.dart';
+import '../../../../../../core/helper/sixbox.dart';
+import '../../../../../../core/theming/colors.dart';
+import '../../../../../../core/theming/style.dart';
 
 class CategoryEmployee extends StatelessWidget {
   const CategoryEmployee({

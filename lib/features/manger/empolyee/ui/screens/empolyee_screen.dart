@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hospital_mange/core/helper/extintion.dart';
-import '../../../../core/helper/sixbox.dart';
-import '../../../../core/routing/routs.dart';
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/style.dart';
-import 'widgets/category_empoyee.dart';
-import 'widgets/employee_bloc_builder.dart';
-import 'widgets/search_employee.dart';
+import '../../../../../core/helper/sixbox.dart';
+import '../../../../../core/routing/routs.dart';
+import '../../../../../core/theming/colors.dart';
+import '../../../../../core/theming/style.dart';
+import '../widgets/employee/category_empoyee.dart';
+import '../widgets/employee/employee_bloc_builder.dart';
+import '../widgets/employee/search_employee.dart';
 
 class EmployeesScreen extends StatelessWidget {
   const EmployeesScreen({super.key});
@@ -48,7 +48,7 @@ class EmployeesScreen extends StatelessWidget {
             virticalspace(20),
             const CategoryEmployee(),
             virticalspace(20),
-            const Expanded(child: EmployeeBlocBuilder()),
+            const EmployeeBlocBuilder(),
           ],
         ),
       ),

@@ -11,11 +11,13 @@ import 'package:hospital_mange/features/doctor/home/ui/home_doctor_screen.dart';
 import 'package:hospital_mange/features/layout/ui/home_screen.dart';
 import 'package:hospital_mange/features/manger/case_detaails/ui/case_details_screen.dart';
 import 'package:hospital_mange/features/manger/cases_manger/ui/cases_screen.dart';
+import 'package:hospital_mange/features/manger/empolyee/data/models/employee_model.dart';
 import 'package:hospital_mange/features/manger/home_manger/ui/home_manger_screen.dart';
 import '../../features/auth/add_user/data/logic/cubit/sign_up_cubit.dart';
 import '../../features/auth/profile/ui/profile_screen.dart';
 import '../../features/manger/empolyee/logic/employee_cubit.dart';
-import '../../features/manger/empolyee/ui/empolyee_screen.dart';
+import '../../features/manger/empolyee/ui/screens/empolyee_screen.dart';
+import '../../features/manger/empolyee/ui/screens/profile_employee_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -80,6 +82,14 @@ class AppRouter {
       case Routes.callsDoctorScreen:
         return MaterialPageRoute(
           builder: (context) => const CallsDoctorScreen(),
+        );
+
+      case Routes.profileEmployee:
+        final employee = settings.arguments as Employees;
+        return MaterialPageRoute(
+          builder: (context) => ProfileEmployeeScreen(
+            employee: employee,
+          ),
         );
 // Error Message
       default:

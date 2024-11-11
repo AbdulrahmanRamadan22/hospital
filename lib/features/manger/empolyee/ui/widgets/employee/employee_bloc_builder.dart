@@ -1,12 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hospital_mange/features/manger/empolyee/logic/employee_state.dart';
-import 'package:hospital_mange/features/manger/empolyee/ui/widgets/list_view_doctors.dart';
-import 'package:redacted/redacted.dart';
+import 'package:hospital_mange/features/manger/empolyee/ui/widgets/employee/list_view_employees.dart';
 
-import '../../logic/employee_cubit.dart';
+import '../../../../../../core/theming/colors.dart';
+import '../../../logic/employee_cubit.dart';
 
 class EmployeeBlocBuilder extends StatelessWidget {
   const EmployeeBlocBuilder({super.key});
@@ -19,17 +17,13 @@ class EmployeeBlocBuilder extends StatelessWidget {
         buildWhen:
         (previous, current) =>
             current is Loading || current is Success || current is Error;
-
         return state.maybeWhen(
-          loading: () => const ListViewDoctors().redacted(
-            context: context,
-            redact: true,
-
-            configuration: RedactedConfiguration(
-              animationDuration: const Duration(seconds: 20), //default
-            ),
-          ),
-          success: (employeeResponse) => ListViewDoctors(
+          loading: () => Center(
+              child: CircularProgressIndicator(
+            backgroundColor: ColorsApp.gray,
+            color: ColorsApp.mainColor,
+          )),
+          success: (employeeResponse) => ListViewEmployees(
             employees: employeeResponse.employees,
           ),
           error: (error) => const Center(child: CircularProgressIndicator()),
@@ -39,6 +33,3 @@ class EmployeeBlocBuilder extends StatelessWidget {
     );
   }
 }
-
-
-

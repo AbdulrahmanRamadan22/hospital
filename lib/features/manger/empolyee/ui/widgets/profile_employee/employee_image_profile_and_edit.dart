@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 
-class ImageProfileAndEdit extends StatelessWidget {
+class EmployeeImageProfileAndEdit extends StatelessWidget {
   final String? image;
 
-  const ImageProfileAndEdit({
+  const EmployeeImageProfileAndEdit({
     super.key,
     required this.image,
   });
