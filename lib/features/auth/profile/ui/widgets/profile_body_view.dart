@@ -14,6 +14,7 @@ class ProfileBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         virticalspace(10),
@@ -40,3 +41,25 @@ class ProfileBodyView extends StatelessWidget {
     );
   }
 }
+
+// import 'package:intl/intl.dart';
+
+// void main() {
+//   String timestamp = '2024-11-11T22:33:42.000Z';
+
+//   // Parse the timestamp into a DateTime object
+//   DateTime dateTime = DateTime.parse(timestamp);
+
+//   // Example: Get just the date part
+//   String dateOnly = DateFormat('yyyy-MM-dd').format(dateTime);
+//   print('Date: $dateOnly');
+
+//   // Example: Get just the time part
+//   String timeOnly = DateFormat('HH:mm:ss').format(dateTime);
+//   print('Time: $timeOnly');
+
+//   // Example: Modify the time (e.g., set hour to 0)
+//   DateTime modifiedDateTime = DateTime(dateTime.year, dateTime.month, dateTime.day, 0, 0);
+//   String modifiedTime = DateFormat('yyyy-MM-dd HH:mm:ss').format(modifiedDateTime);
+//   print('Modified Time: $modifiedTime');
+// }
