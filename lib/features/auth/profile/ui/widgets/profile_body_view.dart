@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hospital_mange/core/helper/extintion.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/core/widget/app_text_button.dart';
-import 'package:hospital_mange/features/auth/profile/data/models/update_profile.dart';
 import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_cubit.dart';
 import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_state.dart';
 import 'package:hospital_mange/features/auth/profile/ui/widgets/details_of_profile.dart';
