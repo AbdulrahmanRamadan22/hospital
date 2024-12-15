@@ -11,7 +11,6 @@ class SharedPrefHelper {
 
     sharedPreferences = await SharedPreferences.getInstance();
   }
-
   static Future<bool> putBoolean({
     required String key,
     required bool value,
