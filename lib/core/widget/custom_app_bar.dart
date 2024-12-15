@@ -5,6 +5,7 @@ import 'package:hospital_mange/core/helper/extintion.dart';
 import 'package:hospital_mange/core/helper/shared_pref_helper.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/core/theming/style.dart';
+import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_state.dart';
 
 import '../../../../../core/routing/routs.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -14,8 +15,9 @@ class CustomImageAndNameAndSpecialty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     final imageUrl = SharedPrefHelper.getData(key: SharedPrefKeys.image);
+
+    // final profileImage = SharedPrefHelper.getData(key: SharedPrefKeys.image);
 
     return Card(
       color: ColorsApp.white,
@@ -29,7 +31,8 @@ class CustomImageAndNameAndSpecialty extends StatelessWidget {
               context.pushNamed(Routes.myProfile);
             },
             child: CachedNetworkImage(
-              imageUrl: imageUrl,
+              imageUrl: imageUrl ?? "",
+
               height: 45.h, // you can adjust this as needed
               placeholder: (context, url) => CircularProgressIndicator(
                 color: ColorsApp.mainColor,

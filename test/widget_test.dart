@@ -10,8 +10,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hospital_mange/hospital_mangement.dart';
 import 'package:hospital_mange/core/routing/app_router.dart';
 
-import 'package:hospital_mange/main.dart';
-
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.

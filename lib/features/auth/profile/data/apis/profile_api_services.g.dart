@@ -14,7 +14,7 @@ class _ProfileApiServices implements ProfileApiServices {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'https://hospital-chi-vert.vercel.app/api/v1/';
+    baseUrl ??= 'https://hp-beryl.vercel.app/api/v1/';
   }
 
   final Dio _dio;
@@ -54,6 +54,38 @@ class _ProfileApiServices implements ProfileApiServices {
       errorLogger?.logError(e, s, _options);
       rethrow;
     }
+    return _value;
+  }
+
+  @override
+  Future<dynamic> updateProfile(
+    String token,
+    UpdateProfile updateProfile,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'token': token};
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(updateProfile.toJson());
+    final _options = _setStreamType<dynamic>(Options(
+      method: 'PATCH',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'employee',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch(_options);
+    final _value = _result.data;
     return _value;
   }
 

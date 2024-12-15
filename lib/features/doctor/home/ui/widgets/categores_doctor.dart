@@ -34,7 +34,7 @@ class CategoresDoctor extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              context.pushNamed(Routes.casesMangerScreen);
+              context.pushNamed(Routes.doctorCasesDetailsScreen);
             },
             child: CustomCard(
               icon: Icons.add_location_outlined,
