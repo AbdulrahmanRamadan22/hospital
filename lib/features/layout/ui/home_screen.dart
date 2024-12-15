@@ -14,6 +14,9 @@ class HomeScreen extends StatelessWidget {
         return const HomeDoctorScreen();
       case "Manager":
         return const HomeMangerScreen();
+      // case "employee":
+      // return const HomeMangerScreen();
+
       default:
         return const LoginScreen();
     }
