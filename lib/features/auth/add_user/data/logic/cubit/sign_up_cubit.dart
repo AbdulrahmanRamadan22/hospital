@@ -33,6 +33,7 @@ class SignUpCubit extends Cubit<SignUpState> {
       role: roleController.text,
       status: statusController.text,
       address: addressController.text,
+      
     ));
     response.when(success: (signUpResponse) {
       emit(SignUpState.success(signUpResponse));

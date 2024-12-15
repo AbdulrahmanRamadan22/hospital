@@ -14,7 +14,7 @@ class _EmployeeApiServices implements EmployeeApiServices {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'https://hospital-chi-vert.vercel.app/api/v1/';
+    baseUrl ??= 'https://hp-beryl.vercel.app/api/v1/';
   }
 
   final Dio _dio;

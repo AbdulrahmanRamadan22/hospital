@@ -1,7 +1,5 @@
 class ConstantApi {
-  static const String apiBaseUrl =
-      "https://hospital-chi-vert.vercel.app/api/v1/";
-  
+  static const String apiBaseUrl = "https://hp-beryl.vercel.app/api/v1/";
 }
 
 class ApiErrors {

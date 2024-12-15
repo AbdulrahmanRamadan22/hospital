@@ -7,6 +7,7 @@ import 'package:hospital_mange/features/auth/login/data/apis/login_api_services.
 import 'package:hospital_mange/features/auth/login/data/repo/login_repo.dart';
 import 'package:hospital_mange/features/auth/profile/data/apis/profile_api_services.dart';
 import 'package:hospital_mange/features/auth/profile/data/repo/profile_repo.dart';
+import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_cubit.dart';
 import 'package:hospital_mange/features/manger/empolyee/data/apis/employee_api_services.dart';
 import 'package:hospital_mange/features/manger/empolyee/data/repo/employee_repo.dart';
 
@@ -30,12 +31,16 @@ Future<void> setupGetIt() async {
 
   getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
 
-
   //employee
-    getIt
-      .registerLazySingleton<EmployeeApiServices>(() => EmployeeApiServices(dio));
-
+  getIt.registerLazySingleton<EmployeeApiServices>(
+      () => EmployeeApiServices(dio));
 
   getIt.registerLazySingleton<EmployeeRepo>(() => EmployeeRepo(getIt()));
 
+// update profile
+  getIt
+      .registerLazySingleton<ProfileApiServices>(() => ProfileApiServices(dio));
+
+  getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
+  // getIt.registerLazySingleton<ProfileCuibt>(() => ProfileCuibt(getIt()));
 }
