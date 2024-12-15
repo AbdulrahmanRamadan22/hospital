@@ -41,7 +41,11 @@ dependencies:
   freezed: ^2.5.7
   freezed_result: ^1.0.3+1
   get_it: ^8.0.2
+<<<<<<< HEAD
   image_picker: ^1.1.2
+=======
+  intl: ^0.19.0
+>>>>>>> c1c3074a592b6e365ffbe2540d876097dc01d20a
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
   pretty_dio_logger: ^1.4.0
