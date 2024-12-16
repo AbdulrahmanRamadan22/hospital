@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:hospital_mange/core/functions/upload_image_to_api.dart';
 import 'package:hospital_mange/core/helper/constants.dart';
 import 'package:hospital_mange/features/auth/profile/data/models/update_profile.dart';
@@ -30,17 +31,31 @@ class ProfileCuibt extends Cubit<ProfileState> {
 //  UploadingProfilePic method
   uploadingProfilePic(XFile image) {
     profileImage = image;
-    // print(profileImage);
+    print("55555555555555555555");
+    print(profileImage!.path);
     emit(const ProfileState.uploadingProfilePic());
+  }
+
+  Future uploadImageToApis(String image) async {
+    return MultipartFile.fromFile(
+      image,
+      filename: "https://res.cloudinary.com/dpq8atnxn/image/upload/v1$image",
+    );
   }
 
   void emitUpdateProfile() async {
     emit(const ProfileState.loading());
 
+    var image = await uploadImageToApis(profileImage!.path.toString());
+
+    print("88888888888");
+
+    print(image);
+
     final response = await _profileRepo.updateProfile(
       token: "host__${SharedPrefValues.token}",
       updateProfile: UpdateProfile(
-        avatar: await uploadImageToApis(profileImage!),
+        avatar: await uploadImageToApis(image),
       ),
     );
 

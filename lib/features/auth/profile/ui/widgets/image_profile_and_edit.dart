@@ -62,6 +62,7 @@ class ImageProfileAndEdit extends StatelessWidget {
                         .then((value) {
                       if (value != null) {
                         context.read<ProfileCuibt>().uploadingProfilePic(value);
+                        print(value.path);
                       }
                     });
                   },
