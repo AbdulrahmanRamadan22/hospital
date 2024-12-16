@@ -7,7 +7,6 @@ import 'package:hospital_mange/features/auth/login/logic/cubit/login_cubit.dart'
 import 'package:hospital_mange/features/auth/login/ui/login_screen.dart';
 import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_cubit.dart';
 import 'package:hospital_mange/features/doctor/calls/ui/calls_doctor_screen.dart';
-import 'package:hospital_mange/features/doctor/cases/ui/cases_details.dart';
 import 'package:hospital_mange/features/doctor/cases/ui/widgets/doctor_case_details.dart';
 import 'package:hospital_mange/features/doctor/home/ui/home_doctor_screen.dart';
 import 'package:hospital_mange/features/layout/ui/home_screen.dart';

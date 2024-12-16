@@ -5,7 +5,6 @@ import 'package:hospital_mange/core/helper/extintion.dart';
 import 'package:hospital_mange/core/helper/shared_pref_helper.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/core/theming/style.dart';
-import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_state.dart';
 
 import '../../../../../core/routing/routs.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -24,6 +23,7 @@ class CustomImageAndNameAndSpecialty extends StatelessWidget {
       elevation: 0,
       child: ListTile(
         contentPadding: EdgeInsets.zero,
+        
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(15.r),
           child: GestureDetector(

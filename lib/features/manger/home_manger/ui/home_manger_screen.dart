@@ -19,7 +19,7 @@ class HomeMangerScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              virticalspace(10),
+       
               const CustomImageAndNameAndSpecialty(),
               virticalspace(10),
               const Expanded(child: CategoresManger()),

@@ -9,7 +9,7 @@ import '../widgets/profile_employee/details_of_profile_employee.dart';
 
 class ProfileEmployeeScreen extends StatelessWidget {
   final Employees? employee;
-  const ProfileEmployeeScreen({super.key,required this.employee});
+  const ProfileEmployeeScreen({super.key, required this.employee});
 
   @override
   Widget build(BuildContext context) {

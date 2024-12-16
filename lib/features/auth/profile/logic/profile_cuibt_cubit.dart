@@ -40,11 +40,10 @@ class ProfileCuibt extends Cubit<ProfileState> {
     final response = await _profileRepo.updateProfile(
       token: "host__${SharedPrefValues.token}",
       updateProfile: UpdateProfile(
-        avatar: await uploadImageToApis(
-          profileImage!,
-        ),
+        avatar: await uploadImageToApis(profileImage!),
       ),
     );
+
     response.when(success: (dynamic) {
       emit(const UpdateProfileStateSuccess());
       // SharedPrefValues.image = profileImage.toString();

@@ -1,3 +1,6 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
@@ -9,7 +12,7 @@ import 'package:hospital_mange/features/auth/profile/logic/profile_cuibt_state.d
 import 'package:image_picker/image_picker.dart';
 
 class ImageProfileAndEdit extends StatelessWidget {
-  final String? image;
+  final dynamic image;
 
   const ImageProfileAndEdit({
     super.key,
@@ -18,8 +21,7 @@ class ImageProfileAndEdit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<ProfileCuibt, ProfileState>(
-      listener: (context, state) {},
+    return BlocBuilder<ProfileCuibt, ProfileState>(
       builder: (context, state) {
         return Stack(
           children: [
@@ -58,7 +60,9 @@ class ImageProfileAndEdit extends StatelessWidget {
                     ImagePicker()
                         .pickImage(source: ImageSource.gallery)
                         .then((value) {
-                      context.read<ProfileCuibt>().profileImage = value;
+                      if (value != null) {
+                        context.read<ProfileCuibt>().uploadingProfilePic(value);
+                      }
                     });
                   },
                   child: Icon(
