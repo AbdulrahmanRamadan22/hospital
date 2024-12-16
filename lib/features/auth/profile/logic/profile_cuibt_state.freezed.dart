@@ -23,9 +23,9 @@ mixin _$ProfileState<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,9 +35,9 @@ mixin _$ProfileState<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +47,9 @@ mixin _$ProfileState<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,12 +60,12 @@ mixin _$ProfileState<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,12 +75,12 @@ mixin _$ProfileState<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -90,11 +90,11 @@ mixin _$ProfileState<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -167,9 +167,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
     return initial();
   }
@@ -182,9 +182,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
     return initial?.call();
   }
@@ -197,9 +197,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -216,12 +216,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
     return initial(this);
   }
@@ -234,12 +234,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
     return initial?.call(this);
   }
@@ -252,11 +252,11 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -316,9 +316,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
     return loading();
   }
@@ -331,9 +331,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
     return loading?.call();
   }
@@ -346,9 +346,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -365,12 +365,12 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
     return loading(this);
   }
@@ -383,12 +383,12 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
     return loading?.call(this);
   }
@@ -401,11 +401,11 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -493,9 +493,9 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
     return success(userModel);
   }
@@ -508,9 +508,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
     return success?.call(userModel);
   }
@@ -523,9 +523,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -542,12 +542,12 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
     return success(this);
   }
@@ -560,12 +560,12 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
     return success?.call(this);
   }
@@ -578,11 +578,11 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -678,9 +678,9 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
     return error(this.error);
   }
@@ -693,9 +693,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
     return error?.call(this.error);
   }
@@ -708,9 +708,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -727,12 +727,12 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
     return error(this);
   }
@@ -745,12 +745,12 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
     return error?.call(this);
   }
@@ -763,11 +763,11 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -836,9 +836,9 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
     return uploadingProfilePic();
   }
@@ -851,9 +851,9 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
     return uploadingProfilePic?.call();
   }
@@ -866,9 +866,9 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (uploadingProfilePic != null) {
@@ -885,12 +885,12 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
     return uploadingProfilePic(this);
   }
@@ -903,12 +903,12 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
     return uploadingProfilePic?.call(this);
   }
@@ -921,11 +921,11 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
     if (uploadingProfilePic != null) {
@@ -940,21 +940,21 @@ abstract class UploadingProfilePic<T> implements ProfileState<T> {
 }
 
 /// @nodoc
-abstract class _$$UpdateProfileStateloadingImplCopyWith<T, $Res> {
-  factory _$$UpdateProfileStateloadingImplCopyWith(
-          _$UpdateProfileStateloadingImpl<T> value,
-          $Res Function(_$UpdateProfileStateloadingImpl<T>) then) =
-      __$$UpdateProfileStateloadingImplCopyWithImpl<T, $Res>;
+abstract class _$$UpdateProfileStateLoadingImplCopyWith<T, $Res> {
+  factory _$$UpdateProfileStateLoadingImplCopyWith(
+          _$UpdateProfileStateLoadingImpl<T> value,
+          $Res Function(_$UpdateProfileStateLoadingImpl<T>) then) =
+      __$$UpdateProfileStateLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$UpdateProfileStateloadingImplCopyWithImpl<T, $Res>
+class __$$UpdateProfileStateLoadingImplCopyWithImpl<T, $Res>
     extends _$ProfileStateCopyWithImpl<T, $Res,
-        _$UpdateProfileStateloadingImpl<T>>
-    implements _$$UpdateProfileStateloadingImplCopyWith<T, $Res> {
-  __$$UpdateProfileStateloadingImplCopyWithImpl(
-      _$UpdateProfileStateloadingImpl<T> _value,
-      $Res Function(_$UpdateProfileStateloadingImpl<T>) _then)
+        _$UpdateProfileStateLoadingImpl<T>>
+    implements _$$UpdateProfileStateLoadingImplCopyWith<T, $Res> {
+  __$$UpdateProfileStateLoadingImplCopyWithImpl(
+      _$UpdateProfileStateLoadingImpl<T> _value,
+      $Res Function(_$UpdateProfileStateLoadingImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -963,20 +963,20 @@ class __$$UpdateProfileStateloadingImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$UpdateProfileStateloadingImpl<T>
-    implements UpdateProfileStateloading<T> {
-  const _$UpdateProfileStateloadingImpl();
+class _$UpdateProfileStateLoadingImpl<T>
+    implements UpdateProfileStateLoading<T> {
+  const _$UpdateProfileStateLoadingImpl();
 
   @override
   String toString() {
-    return 'ProfileState<$T>.updateProfileStateloading()';
+    return 'ProfileState<$T>.updateProfileStateLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdateProfileStateloadingImpl<T>);
+            other is _$UpdateProfileStateLoadingImpl<T>);
   }
 
   @override
@@ -990,11 +990,11 @@ class _$UpdateProfileStateloadingImpl<T>
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
-    return updateProfileStateloading();
+    return updateProfileStateLoading();
   }
 
   @override
@@ -1005,11 +1005,11 @@ class _$UpdateProfileStateloadingImpl<T>
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
-    return updateProfileStateloading?.call();
+    return updateProfileStateLoading?.call();
   }
 
   @override
@@ -1020,13 +1020,13 @@ class _$UpdateProfileStateloadingImpl<T>
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
-    if (updateProfileStateloading != null) {
-      return updateProfileStateloading();
+    if (updateProfileStateLoading != null) {
+      return updateProfileStateLoading();
     }
     return orElse();
   }
@@ -1039,14 +1039,14 @@ class _$UpdateProfileStateloadingImpl<T>
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
-    return updateProfileStateloading(this);
+    return updateProfileStateLoading(this);
   }
 
   @override
@@ -1057,14 +1057,14 @@ class _$UpdateProfileStateloadingImpl<T>
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
-    return updateProfileStateloading?.call(this);
+    return updateProfileStateLoading?.call(this);
   }
 
   @override
@@ -1075,41 +1075,41 @@ class _$UpdateProfileStateloadingImpl<T>
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
-    if (updateProfileStateloading != null) {
-      return updateProfileStateloading(this);
+    if (updateProfileStateLoading != null) {
+      return updateProfileStateLoading(this);
     }
     return orElse();
   }
 }
 
-abstract class UpdateProfileStateloading<T> implements ProfileState<T> {
-  const factory UpdateProfileStateloading() =
-      _$UpdateProfileStateloadingImpl<T>;
+abstract class UpdateProfileStateLoading<T> implements ProfileState<T> {
+  const factory UpdateProfileStateLoading() =
+      _$UpdateProfileStateLoadingImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$UpdateProfileStatesuccessImplCopyWith<T, $Res> {
-  factory _$$UpdateProfileStatesuccessImplCopyWith(
-          _$UpdateProfileStatesuccessImpl<T> value,
-          $Res Function(_$UpdateProfileStatesuccessImpl<T>) then) =
-      __$$UpdateProfileStatesuccessImplCopyWithImpl<T, $Res>;
+abstract class _$$UpdateProfileStateSuccessImplCopyWith<T, $Res> {
+  factory _$$UpdateProfileStateSuccessImplCopyWith(
+          _$UpdateProfileStateSuccessImpl<T> value,
+          $Res Function(_$UpdateProfileStateSuccessImpl<T>) then) =
+      __$$UpdateProfileStateSuccessImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$UpdateProfileStatesuccessImplCopyWithImpl<T, $Res>
+class __$$UpdateProfileStateSuccessImplCopyWithImpl<T, $Res>
     extends _$ProfileStateCopyWithImpl<T, $Res,
-        _$UpdateProfileStatesuccessImpl<T>>
-    implements _$$UpdateProfileStatesuccessImplCopyWith<T, $Res> {
-  __$$UpdateProfileStatesuccessImplCopyWithImpl(
-      _$UpdateProfileStatesuccessImpl<T> _value,
-      $Res Function(_$UpdateProfileStatesuccessImpl<T>) _then)
+        _$UpdateProfileStateSuccessImpl<T>>
+    implements _$$UpdateProfileStateSuccessImplCopyWith<T, $Res> {
+  __$$UpdateProfileStateSuccessImplCopyWithImpl(
+      _$UpdateProfileStateSuccessImpl<T> _value,
+      $Res Function(_$UpdateProfileStateSuccessImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -1118,20 +1118,20 @@ class __$$UpdateProfileStatesuccessImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$UpdateProfileStatesuccessImpl<T>
-    implements UpdateProfileStatesuccess<T> {
-  const _$UpdateProfileStatesuccessImpl();
+class _$UpdateProfileStateSuccessImpl<T>
+    implements UpdateProfileStateSuccess<T> {
+  const _$UpdateProfileStateSuccessImpl();
 
   @override
   String toString() {
-    return 'ProfileState<$T>.updateProfileStatesuccess()';
+    return 'ProfileState<$T>.updateProfileStateSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdateProfileStatesuccessImpl<T>);
+            other is _$UpdateProfileStateSuccessImpl<T>);
   }
 
   @override
@@ -1145,11 +1145,11 @@ class _$UpdateProfileStatesuccessImpl<T>
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
-    return updateProfileStatesuccess();
+    return updateProfileStateSuccess();
   }
 
   @override
@@ -1160,11 +1160,11 @@ class _$UpdateProfileStatesuccessImpl<T>
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
-    return updateProfileStatesuccess?.call();
+    return updateProfileStateSuccess?.call();
   }
 
   @override
@@ -1175,13 +1175,13 @@ class _$UpdateProfileStatesuccessImpl<T>
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
-    if (updateProfileStatesuccess != null) {
-      return updateProfileStatesuccess();
+    if (updateProfileStateSuccess != null) {
+      return updateProfileStateSuccess();
     }
     return orElse();
   }
@@ -1194,14 +1194,14 @@ class _$UpdateProfileStatesuccessImpl<T>
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
-    return updateProfileStatesuccess(this);
+    return updateProfileStateSuccess(this);
   }
 
   @override
@@ -1212,14 +1212,14 @@ class _$UpdateProfileStatesuccessImpl<T>
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
-    return updateProfileStatesuccess?.call(this);
+    return updateProfileStateSuccess?.call(this);
   }
 
   @override
@@ -1230,43 +1230,43 @@ class _$UpdateProfileStatesuccessImpl<T>
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
-    if (updateProfileStatesuccess != null) {
-      return updateProfileStatesuccess(this);
+    if (updateProfileStateSuccess != null) {
+      return updateProfileStateSuccess(this);
     }
     return orElse();
   }
 }
 
-abstract class UpdateProfileStatesuccess<T> implements ProfileState<T> {
-  const factory UpdateProfileStatesuccess() =
-      _$UpdateProfileStatesuccessImpl<T>;
+abstract class UpdateProfileStateSuccess<T> implements ProfileState<T> {
+  const factory UpdateProfileStateSuccess() =
+      _$UpdateProfileStateSuccessImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$UpdateProfileStateerrorImplCopyWith<T, $Res> {
-  factory _$$UpdateProfileStateerrorImplCopyWith(
-          _$UpdateProfileStateerrorImpl<T> value,
-          $Res Function(_$UpdateProfileStateerrorImpl<T>) then) =
-      __$$UpdateProfileStateerrorImplCopyWithImpl<T, $Res>;
+abstract class _$$UpdateProfileStateErrorImplCopyWith<T, $Res> {
+  factory _$$UpdateProfileStateErrorImplCopyWith(
+          _$UpdateProfileStateErrorImpl<T> value,
+          $Res Function(_$UpdateProfileStateErrorImpl<T>) then) =
+      __$$UpdateProfileStateErrorImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({dynamic error});
 }
 
 /// @nodoc
-class __$$UpdateProfileStateerrorImplCopyWithImpl<T, $Res>
+class __$$UpdateProfileStateErrorImplCopyWithImpl<T, $Res>
     extends _$ProfileStateCopyWithImpl<T, $Res,
-        _$UpdateProfileStateerrorImpl<T>>
-    implements _$$UpdateProfileStateerrorImplCopyWith<T, $Res> {
-  __$$UpdateProfileStateerrorImplCopyWithImpl(
-      _$UpdateProfileStateerrorImpl<T> _value,
-      $Res Function(_$UpdateProfileStateerrorImpl<T>) _then)
+        _$UpdateProfileStateErrorImpl<T>>
+    implements _$$UpdateProfileStateErrorImplCopyWith<T, $Res> {
+  __$$UpdateProfileStateErrorImplCopyWithImpl(
+      _$UpdateProfileStateErrorImpl<T> _value,
+      $Res Function(_$UpdateProfileStateErrorImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -1276,7 +1276,7 @@ class __$$UpdateProfileStateerrorImplCopyWithImpl<T, $Res>
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_$UpdateProfileStateerrorImpl<T>(
+    return _then(_$UpdateProfileStateErrorImpl<T>(
       freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -1287,22 +1287,22 @@ class __$$UpdateProfileStateerrorImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
-  const _$UpdateProfileStateerrorImpl(this.error);
+class _$UpdateProfileStateErrorImpl<T> implements UpdateProfileStateError<T> {
+  const _$UpdateProfileStateErrorImpl(this.error);
 
   @override
   final dynamic error;
 
   @override
   String toString() {
-    return 'ProfileState<$T>.updateProfileStateerror(error: $error)';
+    return 'ProfileState<$T>.updateProfileStateError(error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdateProfileStateerrorImpl<T> &&
+            other is _$UpdateProfileStateErrorImpl<T> &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
@@ -1315,9 +1315,9 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdateProfileStateerrorImplCopyWith<T, _$UpdateProfileStateerrorImpl<T>>
-      get copyWith => __$$UpdateProfileStateerrorImplCopyWithImpl<T,
-          _$UpdateProfileStateerrorImpl<T>>(this, _$identity);
+  _$$UpdateProfileStateErrorImplCopyWith<T, _$UpdateProfileStateErrorImpl<T>>
+      get copyWith => __$$UpdateProfileStateErrorImplCopyWithImpl<T,
+          _$UpdateProfileStateErrorImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1327,11 +1327,11 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
     required TResult Function(UserModel userModel) success,
     required TResult Function(dynamic error) error,
     required TResult Function() uploadingProfilePic,
-    required TResult Function() updateProfileStateloading,
-    required TResult Function() updateProfileStatesuccess,
-    required TResult Function(dynamic error) updateProfileStateerror,
+    required TResult Function() updateProfileStateLoading,
+    required TResult Function() updateProfileStateSuccess,
+    required TResult Function(dynamic error) updateProfileStateError,
   }) {
-    return updateProfileStateerror(this.error);
+    return updateProfileStateError(this.error);
   }
 
   @override
@@ -1342,11 +1342,11 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
     TResult? Function(UserModel userModel)? success,
     TResult? Function(dynamic error)? error,
     TResult? Function()? uploadingProfilePic,
-    TResult? Function()? updateProfileStateloading,
-    TResult? Function()? updateProfileStatesuccess,
-    TResult? Function(dynamic error)? updateProfileStateerror,
+    TResult? Function()? updateProfileStateLoading,
+    TResult? Function()? updateProfileStateSuccess,
+    TResult? Function(dynamic error)? updateProfileStateError,
   }) {
-    return updateProfileStateerror?.call(this.error);
+    return updateProfileStateError?.call(this.error);
   }
 
   @override
@@ -1357,13 +1357,13 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
     TResult Function(UserModel userModel)? success,
     TResult Function(dynamic error)? error,
     TResult Function()? uploadingProfilePic,
-    TResult Function()? updateProfileStateloading,
-    TResult Function()? updateProfileStatesuccess,
-    TResult Function(dynamic error)? updateProfileStateerror,
+    TResult Function()? updateProfileStateLoading,
+    TResult Function()? updateProfileStateSuccess,
+    TResult Function(dynamic error)? updateProfileStateError,
     required TResult orElse(),
   }) {
-    if (updateProfileStateerror != null) {
-      return updateProfileStateerror(this.error);
+    if (updateProfileStateError != null) {
+      return updateProfileStateError(this.error);
     }
     return orElse();
   }
@@ -1376,14 +1376,14 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
     required TResult Function(UploadingProfilePic<T> value) uploadingProfilePic,
-    required TResult Function(UpdateProfileStateloading<T> value)
-        updateProfileStateloading,
-    required TResult Function(UpdateProfileStatesuccess<T> value)
-        updateProfileStatesuccess,
-    required TResult Function(UpdateProfileStateerror<T> value)
-        updateProfileStateerror,
+    required TResult Function(UpdateProfileStateLoading<T> value)
+        updateProfileStateLoading,
+    required TResult Function(UpdateProfileStateSuccess<T> value)
+        updateProfileStateSuccess,
+    required TResult Function(UpdateProfileStateError<T> value)
+        updateProfileStateError,
   }) {
-    return updateProfileStateerror(this);
+    return updateProfileStateError(this);
   }
 
   @override
@@ -1394,14 +1394,14 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
     TResult? Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult? Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult? Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult? Function(UpdateProfileStateerror<T> value)?
-        updateProfileStateerror,
+    TResult? Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult? Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult? Function(UpdateProfileStateError<T> value)?
+        updateProfileStateError,
   }) {
-    return updateProfileStateerror?.call(this);
+    return updateProfileStateError?.call(this);
   }
 
   @override
@@ -1412,29 +1412,29 @@ class _$UpdateProfileStateerrorImpl<T> implements UpdateProfileStateerror<T> {
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     TResult Function(UploadingProfilePic<T> value)? uploadingProfilePic,
-    TResult Function(UpdateProfileStateloading<T> value)?
-        updateProfileStateloading,
-    TResult Function(UpdateProfileStatesuccess<T> value)?
-        updateProfileStatesuccess,
-    TResult Function(UpdateProfileStateerror<T> value)? updateProfileStateerror,
+    TResult Function(UpdateProfileStateLoading<T> value)?
+        updateProfileStateLoading,
+    TResult Function(UpdateProfileStateSuccess<T> value)?
+        updateProfileStateSuccess,
+    TResult Function(UpdateProfileStateError<T> value)? updateProfileStateError,
     required TResult orElse(),
   }) {
-    if (updateProfileStateerror != null) {
-      return updateProfileStateerror(this);
+    if (updateProfileStateError != null) {
+      return updateProfileStateError(this);
     }
     return orElse();
   }
 }
 
-abstract class UpdateProfileStateerror<T> implements ProfileState<T> {
-  const factory UpdateProfileStateerror(final dynamic error) =
-      _$UpdateProfileStateerrorImpl<T>;
+abstract class UpdateProfileStateError<T> implements ProfileState<T> {
+  const factory UpdateProfileStateError(final dynamic error) =
+      _$UpdateProfileStateErrorImpl<T>;
 
   dynamic get error;
 
   /// Create a copy of ProfileState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdateProfileStateerrorImplCopyWith<T, _$UpdateProfileStateerrorImpl<T>>
+  _$$UpdateProfileStateErrorImplCopyWith<T, _$UpdateProfileStateErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

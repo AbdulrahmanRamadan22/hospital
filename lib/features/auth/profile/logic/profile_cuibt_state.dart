@@ -11,10 +11,10 @@ class ProfileState<T> with _$ProfileState<T> {
   // UploadeProfilePic
   const factory ProfileState.uploadingProfilePic() = UploadingProfilePic;
   /////////////// UpdateProfile
-  const factory ProfileState.updateProfileStateloading() =
-      UpdateProfileStateloading;
-  const factory ProfileState.updateProfileStatesuccess() =
-      UpdateProfileStatesuccess;
-  const factory ProfileState.updateProfileStateerror(dynamic error) =
-      UpdateProfileStateerror;
+  const factory ProfileState.updateProfileStateLoading() =
+      UpdateProfileStateLoading;
+  const factory ProfileState.updateProfileStateSuccess() =
+      UpdateProfileStateSuccess;
+  const factory ProfileState.updateProfileStateError(dynamic error) =
+      UpdateProfileStateError;
 }

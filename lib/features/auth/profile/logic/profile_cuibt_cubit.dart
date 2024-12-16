@@ -28,9 +28,9 @@ class ProfileCuibt extends Cubit<ProfileState> {
   }
 
 //  UploadingProfilePic method
-  UploadingProfilePic(XFile image) {
+  uploadingProfilePic(XFile image) {
     profileImage = image;
-    print(profileImage);
+    // print(profileImage);
     emit(const ProfileState.uploadingProfilePic());
   }
 
@@ -46,7 +46,7 @@ class ProfileCuibt extends Cubit<ProfileState> {
       ),
     );
     response.when(success: (dynamic) {
-      emit(const UpdateProfileStatesuccess());
+      emit(const UpdateProfileStateSuccess());
       // SharedPrefValues.image = profileImage.toString();
     }, failure: (errorHandler) {
       emit(ProfileState.error(errorHandler));
