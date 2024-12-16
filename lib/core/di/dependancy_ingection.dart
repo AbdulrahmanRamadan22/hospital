@@ -37,10 +37,5 @@ Future<void> setupGetIt() async {
 
   getIt.registerLazySingleton<EmployeeRepo>(() => EmployeeRepo(getIt()));
 
-// update profile
-  getIt
-      .registerLazySingleton<ProfileApiServices>(() => ProfileApiServices(dio));
 
-  getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
-  // getIt.registerLazySingleton<ProfileCuibt>(() => ProfileCuibt(getIt()));
 }
