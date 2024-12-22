@@ -105,8 +105,11 @@ class AppRouter {
       case Routes.profileEmployee:
         final employee = settings.arguments as Employees;
         return MaterialPageRoute(
-          builder: (context) => ProfileEmployeeScreen(
-            employee: employee,
+          builder: (context) => BlocProvider(
+            create: (context) => EmployeeCuibt(getIt()),
+            child: ProfileEmployeeScreen(
+              employee: employee,
+            ),
           ),
         );
 // Error Message

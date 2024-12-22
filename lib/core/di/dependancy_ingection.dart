@@ -36,6 +36,4 @@ Future<void> setupGetIt() async {
       () => EmployeeApiServices(dio));
 
   getIt.registerLazySingleton<EmployeeRepo>(() => EmployeeRepo(getIt()));
-
-
 }

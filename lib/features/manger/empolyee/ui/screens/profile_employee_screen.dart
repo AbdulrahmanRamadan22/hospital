@@ -6,6 +6,7 @@ import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/style.dart';
 import '../../../../auth/profile/ui/widgets/image_profile_and_edit.dart';
 import '../widgets/profile_employee/details_of_profile_employee.dart';
+import '../widgets/profile_employee/employee_image_profile_and_edit.dart';
 
 class ProfileEmployeeScreen extends StatelessWidget {
   final Employees? employee;
@@ -26,7 +27,11 @@ class ProfileEmployeeScreen extends StatelessWidget {
       body: Column(
         children: [
           virticalspace(10),
-          ImageProfileAndEdit(
+          // ImageProfileAndEdit(
+          //   image: employee?.secureUrl,
+          // ),
+
+          EmployeeImageProfile(
             image: employee?.secureUrl,
           ),
           virticalspace(20),
