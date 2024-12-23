@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hospital_mange/core/helper/sixbox.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/core/theming/style.dart';
-import 'package:hospital_mange/features/manger/cases_manger/ui/widget/custom_card_case.dart';
-import 'package:hospital_mange/features/manger/cases_manger/ui/widget/icon_and_named_and_buttons.dart';
+import 'package:hospital_mange/features/manger/cases_manger/ui/widget/cases_bloc_builder.dart';
 
 class CasesMangerScreen extends StatelessWidget {
   const CasesMangerScreen({super.key});
@@ -26,7 +24,7 @@ class CasesMangerScreen extends StatelessWidget {
         ),
         child: const Column(
           children: [
-            CustomCardCase(),
+            CasesBlocBuilder(),
             // const IconsAndNamedAndButtons(),
             // virticalspace(20),
             // const IconsAndNamedAndButtons(),

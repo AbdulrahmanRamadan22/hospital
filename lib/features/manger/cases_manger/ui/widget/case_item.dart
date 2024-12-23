@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_mange/core/helper/extintion.dart';
-import 'package:hospital_mange/core/helper/sixbox.dart';
-import 'package:hospital_mange/core/theming/colors.dart';
-import 'package:hospital_mange/core/theming/style.dart';
-import 'package:hospital_mange/core/widget/app_text_button.dart';
+import 'package:hospital_mange/features/manger/cases_manger/data/models/case_model.dart';
 
-import '../../../../../core/routing/routs.dart';
+import '../../../../../core/helper/sixbox.dart';
+import '../../../../../core/theming/colors.dart';
+import '../../../../../core/theming/style.dart';
+import '../../../../../core/widget/app_text_button.dart';
 import '../../../../../core/widget/custom_item_card.dart';
 
-class CustomCardCase extends StatelessWidget {
-  const CustomCardCase({super.key});
+class CaseItem extends StatelessWidget {
+  final CallModel? caseModel;
+
+  const CaseItem({
+    super.key,
+    this.caseModel,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -26,15 +31,15 @@ class CustomCardCase extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const CustomItemCard(
+            CustomItemCard(
               icon: Icons.account_circle_outlined,
-              text: 'Abdelrahman Ramadan',
+              text: '${caseModel?.name}',
             ),
             virticalspace(13),
-            const CustomItemCard(
-              icon: Icons.date_range,
-              text: '24 .04 .2021',
-            ),
+            CustomItemCard(
+                icon: Icons.date_range,
+                text:
+                    "${(DateTime.parse('${caseModel?.createdAt}')).year}-${(DateTime.parse('${caseModel?.createdAt}')).month.toString().padLeft(2, '0')}-${(DateTime.parse('${caseModel?.createdAt}')).day.toString().padLeft(2, '0')}"),
             virticalspace(20),
             AppTextButton(
               buttonWidth: 230,
@@ -42,7 +47,7 @@ class CustomCardCase extends StatelessWidget {
               buttonText: 'Show Details',
               textStyle: TextStyles.font17white,
               onPressed: () {
-                context.pushNamed(Routes.casesDetailsScreen);
+                // context.pushNamed(Routes.casesDetailsScreen);
               },
             ),
             virticalspace(5),

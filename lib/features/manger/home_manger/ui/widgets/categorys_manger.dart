@@ -54,16 +54,16 @@ class CategoresManger extends StatelessWidget {
               ),
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              context.pushNamed(Routes.casesMangerScreen);
-            },
-            child: CustomCard(
-              icon: Icons.fingerprint,
-              title: 'attendance-leaving',
-              backGroundColor: ColorsApp.mainColor,
-            ),
-          ),
+          // GestureDetector(
+          //   onTap: () {
+          //     context.pushNamed(Routes.casesMangerScreen);
+          //   },
+          //   child: CustomCard(
+          //     icon: Icons.fingerprint,
+          //     title: 'attendance-leaving',
+          //     backGroundColor: ColorsApp.mainColor,
+          //   ),
+          // ),
         ]);
   }
 }

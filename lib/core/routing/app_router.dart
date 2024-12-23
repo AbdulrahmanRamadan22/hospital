@@ -11,6 +11,7 @@ import 'package:hospital_mange/features/doctor/cases/ui/widgets/doctor_case_deta
 import 'package:hospital_mange/features/doctor/home/ui/home_doctor_screen.dart';
 import 'package:hospital_mange/features/layout/ui/home_screen.dart';
 import 'package:hospital_mange/features/manger/case_detaails/ui/case_details_screen.dart';
+import 'package:hospital_mange/features/manger/cases_manger/logic/cases_cubit.dart';
 import 'package:hospital_mange/features/manger/cases_manger/ui/cases_screen.dart';
 import 'package:hospital_mange/features/manger/empolyee/data/models/employee_model.dart';
 import 'package:hospital_mange/features/manger/home_manger/ui/home_manger_screen.dart';
@@ -21,10 +22,16 @@ import '../../features/auth/profile/ui/profile_screen.dart';
 import '../../features/manger/empolyee/logic/employee_cubit.dart';
 import '../../features/manger/empolyee/ui/screens/empolyee_screen.dart';
 import '../../features/manger/empolyee/ui/screens/profile_employee_screen.dart';
+import '../../features/splash/splash_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case Routes.splashScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SplashScreen(),
+        );
+
       //LoginScreen
       case Routes.loginScreen:
         return MaterialPageRoute(
@@ -41,7 +48,10 @@ class AppRouter {
       // casesMangerScreen
       case Routes.casesMangerScreen:
         return MaterialPageRoute(
-          builder: (context) => const CasesMangerScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => CasesCuibt(getIt())..getAllCases(),
+            child: const CasesMangerScreen(),
+          ),
         );
       // caseDetailsScreen
       case Routes.casesDetailsScreen:

@@ -23,7 +23,7 @@ class LoginBlocListener extends StatelessWidget {
               context: context,
               builder: (context) => Center(
                 child: CircularProgressIndicator(
-                  color: ColorsApp.mainGreen,
+                  color: ColorsApp.mainColor,
                 ),
               ),
             );

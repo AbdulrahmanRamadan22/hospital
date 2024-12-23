@@ -14,6 +14,9 @@ class Routes {
   static const String homeResecption = '/homeResecption';
   static const String employeesScreen = '/employeesScreen';
   static const String addUser = '/addUserScreen';
+    static const String splashScreen = '/splashScreen';
+
+  
   static const String myProfile = '/myProfileScreen';
 
   static const String profileEmployee = '/profileEmployee';
