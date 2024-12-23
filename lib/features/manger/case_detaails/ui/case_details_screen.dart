@@ -4,9 +4,11 @@ import 'package:hospital_mange/core/helper/sixbox.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/core/theming/style.dart';
 import 'package:hospital_mange/features/manger/case_detaails/ui/widget/manger_cases.dart';
+import 'package:hospital_mange/features/manger/cases_manger/data/models/case_model.dart';
 
 class CaseDetailsScreen extends StatelessWidget {
-  const CaseDetailsScreen({super.key});
+  final CallModel? caseModel;
+  const CaseDetailsScreen({super.key,this.caseModel});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,9 @@ class CaseDetailsScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const ManagerCases(),
+               ManagerCases(
+                caseModel: caseModel,
+              ),
               virticalspace(16),
             ],
           ),

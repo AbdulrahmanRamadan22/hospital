@@ -11,6 +11,7 @@ import 'package:hospital_mange/features/doctor/cases/ui/widgets/doctor_case_deta
 import 'package:hospital_mange/features/doctor/home/ui/home_doctor_screen.dart';
 import 'package:hospital_mange/features/layout/ui/home_screen.dart';
 import 'package:hospital_mange/features/manger/case_detaails/ui/case_details_screen.dart';
+import 'package:hospital_mange/features/manger/cases_manger/data/models/case_model.dart';
 import 'package:hospital_mange/features/manger/cases_manger/logic/cases_cubit.dart';
 import 'package:hospital_mange/features/manger/cases_manger/ui/cases_screen.dart';
 import 'package:hospital_mange/features/manger/empolyee/data/models/employee_model.dart';
@@ -55,8 +56,12 @@ class AppRouter {
         );
       // caseDetailsScreen
       case Routes.casesDetailsScreen:
+        final caseDetails = settings.arguments as CallModel;
+
         return MaterialPageRoute(
-          builder: (context) => const CaseDetailsScreen(),
+          builder: (context) => CaseDetailsScreen(
+            caseModel: caseDetails,
+          ),
         );
       //EmpolyeeScreen
       case Routes.employeesScreen:

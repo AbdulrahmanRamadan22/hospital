@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_mange/core/helper/extintion.dart';
 import 'package:hospital_mange/features/manger/cases_manger/data/models/case_model.dart';
 
 import '../../../../../core/helper/sixbox.dart';
+import '../../../../../core/routing/routs.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/style.dart';
 import '../../../../../core/widget/app_text_button.dart';
@@ -47,7 +49,7 @@ class CaseItem extends StatelessWidget {
               buttonText: 'Show Details',
               textStyle: TextStyles.font17white,
               onPressed: () {
-                // context.pushNamed(Routes.casesDetailsScreen);
+                context.pushNamed(Routes.casesDetailsScreen, arguments: caseModel);
               },
             ),
             virticalspace(5),

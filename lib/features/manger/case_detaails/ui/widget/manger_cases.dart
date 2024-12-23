@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hospital_mange/core/helper/sixbox.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/core/theming/style.dart';
+import 'package:hospital_mange/features/manger/cases_manger/data/models/case_model.dart';
 
 class ManagerCases extends StatelessWidget {
-  const ManagerCases({
-    super.key,
-  });
+  final CallModel? caseModel;
+  const ManagerCases({super.key, this.caseModel});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class ManagerCases extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              'Ebrahem Khaled',
+              '${caseModel?.name}',
               style: TextStyles.font14lightblack,
             )
           ],
@@ -51,7 +51,7 @@ class ManagerCases extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              '24 year',
+              '${caseModel?.age}',
               style: TextStyles.font14lightblack,
             )
           ],
@@ -65,7 +65,7 @@ class ManagerCases extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              '0112348412',
+              '${caseModel?.phone}',
               style: TextStyles.font14lightblack,
             )
           ],
@@ -79,7 +79,7 @@ class ManagerCases extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              '10. / 10. / 2022',
+              "${(DateTime.parse('${caseModel?.createdAt}')).year}-${(DateTime.parse('${caseModel?.createdAt}')).month.toString().padLeft(2, '0')}-${(DateTime.parse('${caseModel?.createdAt}')).day.toString().padLeft(2, '0')}",
               style: TextStyles.font14lightblack,
             )
           ],
@@ -93,21 +93,7 @@ class ManagerCases extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              'Amr Mohamed',
-              style: TextStyles.font14lightblack,
-            )
-          ],
-        ),
-        virticalspace(15),
-        Row(
-          children: [
-            Text(
-              'Date',
-              style: TextStyles.font14grey,
-            ),
-            const Spacer(),
-            Text(
-              '10. / 10. / 2022',
+              '${caseModel?.doctor}',
               style: TextStyles.font14lightblack,
             )
           ],
@@ -121,24 +107,31 @@ class ManagerCases extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              'Process',
+              '${caseModel?.status}',
               style: TextStyles.font14lightblack,
             ),
             horizontalSpace(5),
             Icon(
-              Icons.timer,
+              caseModel?.status == "InProgress"
+                  ? Icons.timer
+                  : caseModel?.status == "Completed"
+                      ? Icons.check_circle
+                      : caseModel?.status == "Cancelled"
+                          ? Icons.cancel
+                          : Icons.help,
               color: ColorsApp.oringe,
+              // Default icon
             ),
           ],
         ),
-        virticalspace(15),
+        virticalspace(30),
         Text(
           'Case Description',
           style: TextStyles.font14grey,
         ),
         virticalspace(10),
         Text(
-          "Details note : Lorem Ipsum is simply dummy\ntext of the printing and typesetting industry.\nLorem Ipsum has been the industry's",
+          '${caseModel?.cDescription}',
           style: TextStyles.font14lightblack,
         ),
       ],

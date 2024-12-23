@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:hospital_mange/features/manger/cases_manger/ui/widget/case_item.dart';
-
 import '../../../../../core/helper/sixbox.dart';
 import '../../data/models/case_model.dart';
 

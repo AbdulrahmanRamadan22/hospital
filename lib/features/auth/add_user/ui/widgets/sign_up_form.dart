@@ -40,7 +40,7 @@ class _SignUpFormState extends State<SignUpForm> {
               Icons.account_circle_outlined,
               size: 25,
               color: ColorsApp.mainColor,
-            ), 
+            ),
           ),
           virticalspace(15),
           // last name yaaa negim
@@ -104,7 +104,6 @@ class _SignUpFormState extends State<SignUpForm> {
             options: const [
               'Doctor',
               'Manager',
-              'Admin',
               'Receptionist',
             ],
           ),
@@ -239,7 +238,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   !AppRegex.hasMinLength(value) ||
                   !AppRegex.hasUpperCase(value) ||
                   !AppRegex.hasLowerCase(value) ||
-                  !AppRegex.hasNumber(value) ) {
+                  !AppRegex.hasNumber(value)) {
                 return "Please enter a valid password";
               }
               return null;
