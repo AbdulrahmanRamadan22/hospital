@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hospital_mange/features/auth/profile/data/models/user_model.dart';
 
 import '../../../../../core/helper/sixbox.dart';
 import '../../../../../core/theming/colors.dart';

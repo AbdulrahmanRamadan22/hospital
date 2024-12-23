@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hospital_mange/core/helper/sixbox.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
-import 'package:hospital_mange/features/auth/add_user/data/logic/cubit/sign_up_cubit.dart';
+import 'package:hospital_mange/features/auth/add_user/logic/cubit/sign_up_cubit.dart';
 import 'package:hospital_mange/features/auth/add_user/ui/widgets/sign_up_form.dart';
 import '../../../../core/theming/style.dart';
 import '../../../../core/widget/app_text_button.dart';

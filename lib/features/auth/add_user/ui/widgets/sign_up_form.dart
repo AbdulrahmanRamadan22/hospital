@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hospital_mange/features/auth/add_user/data/logic/cubit/sign_up_cubit.dart';
+import 'package:hospital_mange/features/auth/add_user/logic/cubit/sign_up_cubit.dart';
 import '../../../../../../core/helper/app_regex.dart';
 import '../../../../../../core/helper/sixbox.dart';
 import '../../../../../../core/theming/colors.dart';

@@ -16,7 +16,7 @@ import 'package:hospital_mange/features/manger/empolyee/data/models/employee_mod
 import 'package:hospital_mange/features/manger/home_manger/ui/home_manger_screen.dart';
 import 'package:hospital_mange/features/resceptionist/calls/ui/calls_resecption.dart';
 import 'package:hospital_mange/features/resceptionist/ui/home_resecpion.dart';
-import '../../features/auth/add_user/data/logic/cubit/sign_up_cubit.dart';
+import '../../features/auth/add_user/logic/cubit/sign_up_cubit.dart';
 import '../../features/auth/profile/ui/profile_screen.dart';
 import '../../features/manger/empolyee/logic/employee_cubit.dart';
 import '../../features/manger/empolyee/ui/screens/empolyee_screen.dart';

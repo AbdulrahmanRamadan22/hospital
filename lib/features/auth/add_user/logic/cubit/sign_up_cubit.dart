@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:hospital_mange/features/auth/add_user/data/logic/cubit/sign_up_state.dart';
+import 'package:hospital_mange/features/auth/add_user/logic/cubit/sign_up_state.dart';
 import 'package:hospital_mange/features/auth/add_user/data/models/sign_up_requast_body.dart';
 import 'package:hospital_mange/features/auth/add_user/data/repo/sign_up_repo.dart';
 import 'package:meta/meta.dart';
@@ -38,7 +38,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     response.when(success: (signUpResponse) {
       emit(SignUpState.success(signUpResponse));
     }, failure: (error) {
-      emit(SignUpState.error(error: error.failure.message.toString()));
+      emit(SignUpState.error(error));
     });
   }
 }

@@ -5,6 +5,7 @@ import 'package:hospital_mange/core/routing/routs.dart';
 import 'package:hospital_mange/core/theming/colors.dart';
 import 'package:hospital_mange/features/auth/login/logic/cubit/login_cubit.dart';
 import 'package:hospital_mange/features/auth/login/logic/cubit/login_state.dart';
+import '../../../../../core/networking/api_error_model.dart';
 import '../../../../../core/theming/style.dart';
 
 class LoginBlocListener extends StatelessWidget {
@@ -31,8 +32,8 @@ class LoginBlocListener extends StatelessWidget {
             context.pop();
             context.pushNamed(Routes.homeScreen);
           },
-          error: (error) {
-            setupErrorState(context, error);
+          error: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -40,7 +41,7 @@ class LoginBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context, ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
@@ -51,22 +52,10 @@ class LoginBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
+          textAlign: TextAlign.center,
+          apiErrorModel.message.toString(),
           style: TextStyles.font14grey,
         ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              context.pop();
-            },
-            child: Text(
-              textAlign: TextAlign.center,
-              // textDirection: TextDirection.ltr,
-              'سجل الاول يا محترم 😘',
-              style: TextStyles.font26mainheavenly,
-            ),
-          ),
-        ],
       ),
     );
   }

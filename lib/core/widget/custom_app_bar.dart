@@ -50,11 +50,15 @@ class CustomImageAndNameAndSpecialty extends StatelessWidget {
           "Specialist , ${SharedPrefHelper.getData(key: SharedPrefKeys.role)}",
           style: TextStyles.font12mainheavenly,
         ),
-        trailing: IconButton(
-          onPressed: () {},
-          icon: Badge.count(
-            count: 3,
-            child: const Icon(Icons.notifications_outlined),
+        trailing: GestureDetector(
+          onTap: () {
+            SharedPrefHelper.removeData(key: SharedPrefKeys.token);
+            context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                predicate: (route) => false);
+          },
+          child: Icon(
+            Icons.logout,
+            color: ColorsApp.mainColor,
           ),
         ),
       ),

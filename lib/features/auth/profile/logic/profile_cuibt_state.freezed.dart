@@ -21,7 +21,7 @@ mixin _$ProfileState<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -33,7 +33,7 @@ mixin _$ProfileState<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -45,7 +45,7 @@ mixin _$ProfileState<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -165,7 +165,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -180,7 +180,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -195,7 +195,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -314,7 +314,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -329,7 +329,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -344,7 +344,7 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -491,7 +491,7 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -506,7 +506,7 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -521,7 +521,7 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -610,7 +610,7 @@ abstract class _$$ErrorImplCopyWith<T, $Res> {
           _$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
       __$$ErrorImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({dynamic error});
+  $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
@@ -626,13 +626,13 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? apiErrorModel = null,
   }) {
     return _then(_$ErrorImpl<T>(
-      freezed == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      null == apiErrorModel
+          ? _value.apiErrorModel
+          : apiErrorModel // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
     ));
   }
 }
@@ -640,14 +640,14 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$ErrorImpl<T> implements Error<T> {
-  const _$ErrorImpl(this.error);
+  const _$ErrorImpl(this.apiErrorModel);
 
   @override
-  final dynamic error;
+  final ApiErrorModel apiErrorModel;
 
   @override
   String toString() {
-    return 'ProfileState<$T>.error(error: $error)';
+    return 'ProfileState<$T>.error(apiErrorModel: $apiErrorModel)';
   }
 
   @override
@@ -655,12 +655,12 @@ class _$ErrorImpl<T> implements Error<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl<T> &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.apiErrorModel, apiErrorModel) ||
+                other.apiErrorModel == apiErrorModel));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, apiErrorModel);
 
   /// Create a copy of ProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -676,13 +676,13 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
     required TResult Function(dynamic error) updateProfileStateError,
   }) {
-    return error(this.error);
+    return error(apiErrorModel);
   }
 
   @override
@@ -691,13 +691,13 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
     TResult? Function(dynamic error)? updateProfileStateError,
   }) {
-    return error?.call(this.error);
+    return error?.call(apiErrorModel);
   }
 
   @override
@@ -706,7 +706,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -714,7 +714,7 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(this.error);
+      return error(apiErrorModel);
     }
     return orElse();
   }
@@ -778,9 +778,9 @@ class _$ErrorImpl<T> implements Error<T> {
 }
 
 abstract class Error<T> implements ProfileState<T> {
-  const factory Error(final dynamic error) = _$ErrorImpl<T>;
+  const factory Error(final ApiErrorModel apiErrorModel) = _$ErrorImpl<T>;
 
-  dynamic get error;
+  ApiErrorModel get apiErrorModel;
 
   /// Create a copy of ProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -834,7 +834,7 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -849,7 +849,7 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -864,7 +864,7 @@ class _$UploadingProfilePicImpl<T> implements UploadingProfilePic<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -988,7 +988,7 @@ class _$UpdateProfileStateLoadingImpl<T>
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -1003,7 +1003,7 @@ class _$UpdateProfileStateLoadingImpl<T>
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -1018,7 +1018,7 @@ class _$UpdateProfileStateLoadingImpl<T>
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -1143,7 +1143,7 @@ class _$UpdateProfileStateSuccessImpl<T>
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -1158,7 +1158,7 @@ class _$UpdateProfileStateSuccessImpl<T>
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -1173,7 +1173,7 @@ class _$UpdateProfileStateSuccessImpl<T>
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,
@@ -1325,7 +1325,7 @@ class _$UpdateProfileStateErrorImpl<T> implements UpdateProfileStateError<T> {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(UserModel userModel) success,
-    required TResult Function(dynamic error) error,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function() uploadingProfilePic,
     required TResult Function() updateProfileStateLoading,
     required TResult Function() updateProfileStateSuccess,
@@ -1340,7 +1340,7 @@ class _$UpdateProfileStateErrorImpl<T> implements UpdateProfileStateError<T> {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(UserModel userModel)? success,
-    TResult? Function(dynamic error)? error,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function()? uploadingProfilePic,
     TResult? Function()? updateProfileStateLoading,
     TResult? Function()? updateProfileStateSuccess,
@@ -1355,7 +1355,7 @@ class _$UpdateProfileStateErrorImpl<T> implements UpdateProfileStateError<T> {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(UserModel userModel)? success,
-    TResult Function(dynamic error)? error,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function()? uploadingProfilePic,
     TResult Function()? updateProfileStateLoading,
     TResult Function()? updateProfileStateSuccess,

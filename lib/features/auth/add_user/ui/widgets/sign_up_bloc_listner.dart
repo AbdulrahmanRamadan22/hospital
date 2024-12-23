@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hospital_mange/core/helper/extintion.dart';
-import 'package:hospital_mange/features/auth/add_user/data/logic/cubit/sign_up_cubit.dart';
-import 'package:hospital_mange/features/auth/add_user/data/logic/cubit/sign_up_state.dart';
+import 'package:hospital_mange/core/networking/api_error_model.dart';
+import 'package:hospital_mange/core/routing/routs.dart';
+import 'package:hospital_mange/features/auth/add_user/logic/cubit/sign_up_cubit.dart';
+import 'package:hospital_mange/features/auth/add_user/logic/cubit/sign_up_state.dart';
 
-import '../../../../../core/routing/routs.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/style.dart';
 
@@ -63,7 +64,10 @@ class SignUpBlocListener extends StatelessWidget {
                 disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
-                context.pop();
+                context.pushNamedAndRemoveUntil(
+                  Routes.homeMangerScreen,
+                  predicate: (route) => false,
+                );
                 // context.pushNamed(Routes.loginScreen);
               },
               child: const Text('Continue'),
@@ -74,7 +78,7 @@ class SignUpBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context, ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
@@ -85,7 +89,8 @@ class SignUpBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
+          textAlign: TextAlign.center,
+          apiErrorModel.message.toString(),
           style: TextStyles.font14grey,
         ),
         actions: [
