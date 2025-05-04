@@ -10,7 +10,11 @@ import 'hospital_mangement.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefHelper.init();
+
+  // setupGetIt
   setupGetIt();
+
+  // run app
   runApp(
     HospitalManagement(
       appRouter: AppRouter(),
